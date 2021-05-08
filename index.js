@@ -1,7 +1,7 @@
 /* Config */
 const twitchTvHandle = "Toadofsky";
 const PAUSE_DURATION = 30 * 1000; // 30 seconds
-const DISPLAY_DURATION = 10 * 1000; // 10 seconds
+const DISPLAY_DURATION = 4 * 1000; // 4 seconds
 
 /* DOM */
 const container = document.querySelector(".alerts");
@@ -9,7 +9,7 @@ const img = new Image();
 const queue = new Queue();
 
 /* Sound Effects */
-const pewAudio = new Audio("horn.wav");
+const notifyAudio = new Audio("notification.ogg");
 const magicChime = new Audio("Magic_Chime.mp3");
 
 /* GIFs */
@@ -28,7 +28,7 @@ ComfyJS.onCommand = (user, command, message, flags, extra) => {
   console.log(`!${command} was typed in chat`);
 
   if (command == "jump") {
-    new gifAlert(user, jumpGif, pewAudio, command);
+    new gifAlert(user, jumpGif, notifyAudio, command);
   }
 
   if (command == "welcome") {
@@ -51,7 +51,7 @@ ComfyJS.onChat = (user, message, flags, self, extra) => {
 };
 
 const generateTitle = {
-  jump: " is excited!",
+  jump: " get ready!",
   welcome: " welcome aboard!",
   pizza: " needed a pizza party!",
 };
