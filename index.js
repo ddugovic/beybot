@@ -1,7 +1,7 @@
 /* Config */
 const twitchTvHandle = "Toadofsky";
 const PAUSE_DURATION = 30 * 1000; // 30 seconds
-const DISPLAY_DURATION = 4 * 1000; // 4 seconds
+const DISPLAY_DURATION = 6 * 1000; // 6 seconds
 
 /* DOM */
 const container = document.querySelector(".alerts");
